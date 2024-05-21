@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68743679-0680-4583-8C29-DD000DBBB9DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Qforte</RootNamespace>
+    <AssemblyName>Qforte</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BlurWindow, Version=7.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\BlurWindow.7.0.1\lib\net45\BlurWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormViewProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewProf.Designer.cs">
+      <DependentUpon>FormViewProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>FormEmpHome.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditSal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditSal.Designer.cs">
+      <DependentUpon>FormEditSal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QforteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QforteEmployee.Designer.cs">
+      <DependentUpon>QforteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessage.Designer.cs">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAttend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAttend.Designer.cs">
+      <DependentUpon>FormAttend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSal.Designer.cs">
+      <DependentUpon>FormSal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewEmp.Designer.cs">
+      <DependentUpon>FormViewEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageEmp.Designer.cs">
+      <DependentUpon>FormManageEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QforteAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QforteAdmin.Designer.cs">
+      <DependentUpon>QforteAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLog.Designer.cs">
+      <DependentUpon>FormLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qforte_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Qforte_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Qforte_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Qforte_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Qforte_DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Qforte_DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Qforte_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Qforte_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormViewProf.resx">
+      <DependentUpon>FormViewProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpHome.resx">
+      <DependentUpon>FormEmpHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditSal.resx">
+      <DependentUpon>FormEditSal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QforteEmployee.resx">
+      <DependentUpon>QforteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessage.resx">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAttend.resx">
+      <DependentUpon>FormAttend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSal.resx">
+      <DependentUpon>FormSal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewEmp.resx">
+      <DependentUpon>FormViewEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageEmp.resx">
+      <DependentUpon>FormManageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QforteAdmin.resx">
+      <DependentUpon>QforteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLog.resx">
+      <DependentUpon>FormLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Qforte_DBDataSet.xsc">
+      <DependentUpon>Qforte_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Qforte_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Qforte_DBDataSet.xss">
+      <DependentUpon>Qforte_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet1.xsc">
+      <DependentUpon>Qforte_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Qforte_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Qforte_DBDataSet1.xss">
+      <DependentUpon>Qforte_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet2.xsc">
+      <DependentUpon>Qforte_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Qforte_DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Qforte_DBDataSet2.xss">
+      <DependentUpon>Qforte_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet3.xsc">
+      <DependentUpon>Qforte_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Qforte_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Qforte_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Qforte_DBDataSet3.xss">
+      <DependentUpon>Qforte_DBDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
