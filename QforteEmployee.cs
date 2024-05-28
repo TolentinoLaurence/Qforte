@@ -50,5 +50,14 @@ namespace Qforte
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormViewProf formViewProf = new FormViewProf();
+            formViewProf.TopLevel = false;
+            mainpanel.Controls.Add(formViewProf);
+            formViewProf.BringToFront();
+            formViewProf.Show();
+        }
     }
 }

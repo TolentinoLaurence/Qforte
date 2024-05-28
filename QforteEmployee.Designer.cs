@@ -42,7 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.menupanel1.SuspendLayout();
@@ -164,6 +164,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "          My Profile";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
@@ -193,20 +194,20 @@
             this.button5.Text = "            Attendance";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // mainpanel
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(183, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(761, 459);
-            this.panel2.TabIndex = 7;
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(183, 43);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(761, 459);
+            this.mainpanel.TabIndex = 7;
             // 
             // QforteEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 534);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.menupanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
@@ -237,6 +238,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel mainpanel;
     }
 }

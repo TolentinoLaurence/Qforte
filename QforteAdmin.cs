@@ -17,34 +17,6 @@ namespace Qforte
             InitializeComponent();
         }
 
-        private void menu_Click(object sender, EventArgs e)
-        {
-            sidebartransmission.Start();
-        }
-        Boolean menupanelExpand = true;
-
-        private void sidebartransmission_Tick(object sender, EventArgs e)
-        {
-            if (menupanelExpand)
-            {
-                menupanel.Width -= 10;
-                if (menupanel.Width <= 66)
-                {
-                    menupanelExpand = false;
-                    sidebartransmission.Stop();
-                }
-                else
-                {
-                    menupanel.Width += 10;
-                    if (menupanel.Width >= 183)
-                    {
-                        menupanelExpand = true;
-                        sidebartransmission.Stop();
-                    }
-                }
-            }
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -63,6 +35,33 @@ namespace Qforte
         private void mainpanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btViewEmployee_Click(object sender, EventArgs e)
+        {
+            FormViewEmp formViewEmp = new FormViewEmp();
+            formViewEmp.TopLevel = false;
+            mainpanel.Controls.Add(formViewEmp);
+            formViewEmp.BringToFront();
+            formViewEmp.Show();
+        }
+
+        private void btSalary_Click(object sender, EventArgs e)
+        {
+            FormSal formSal = new FormSal();
+            formSal.TopLevel = false;
+            mainpanel.Controls.Add(formSal);
+            formSal.BringToFront();
+            formSal.Show();
+        }
+
+        private void btAttendance_Click(object sender, EventArgs e)
+        {
+            FormAttend formAttend = new FormAttend();
+            formAttend.TopLevel = false;
+            mainpanel.Controls.Add(formAttend);
+            formAttend.BringToFront();
+            formAttend.Show();
         }
     }
 }

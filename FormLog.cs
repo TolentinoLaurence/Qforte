@@ -19,6 +19,7 @@ namespace Qforte
             QforteAdmin qforte;
             QforteEmployee qforteEmployee;
         }
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-BOTTGEF\\SQLEXPRESS;Initial Catalog=database;Integrated Security=True;");
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -38,28 +39,52 @@ namespace Qforte
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+
             string user, password;
             user = txtUser_ID.Text;
             password = txtpassword.Text;
 
-            if (user == "admin" && password == "admin")
+            try
             {
-                MessageBox.Show("Successfully Log In");
-                QforteAdmin qforte = new QforteAdmin();
-                qforte.Show();
-                this.Hide();
+                string querry = "Select * from Employee where ID = '" + txtUser_ID.Text + "' and Password = '" + txtpassword.Text + "'";
+                SqlDataAdapter da = new SqlDataAdapter(querry,conn);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    user = txtUser_ID.Text;
+                    password = txtpassword.Text;
+
+                    QforteEmployee qforteEmployee = new QforteEmployee();
+                    qforteEmployee.Show();
+                    this.Hide();
+                }
+                else if (user == "admin" && password == "admin123")
+                {
+                    QforteAdmin qforteAdmin = new QforteAdmin();
+                    qforteAdmin.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Details");
+                    txtUser_ID.Clear();
+                    txtpassword.Clear();
+
+                    txtUser_ID.Focus();
+                }
             }
-            else if (user == "emp" && password == "emp")
+            catch 
             {
-                MessageBox.Show("Successfully Log In");
-                QforteEmployee qforteemp = new QforteEmployee();
-                qforteemp.Show();
-                this.Hide();
+                MessageBox.Show("Error");
             }
-            else
+            finally
             {
-                MessageBox.Show("error");
+                conn.Close();
             }
+            
         }
 
         private void FormLog_Load(object sender, EventArgs e)
