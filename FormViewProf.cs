@@ -70,7 +70,7 @@ namespace Qforte
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd2 = new SqlCommand("Update Employee Set Name=@Name,Age=@Age,Gender=@Gender,Position=@Position,Contact=@Contact,Address=@Address,BoD=@BoD,Password=@Password Where ID=@ID", conn);          
+            SqlCommand cmd2 = new SqlCommand("Update Employee Set Contact=@Contact,Address=@Address,Password=@Password Where ID=@ID", conn);         
             cmd2.Parameters.AddWithValue("@Contact", float.Parse(txtContact.Text));
             cmd2.Parameters.AddWithValue("@Address", txtAddress.Text);
             cmd2.Parameters.AddWithValue("@Password", txtPassword.Text);

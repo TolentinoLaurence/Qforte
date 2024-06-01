@@ -22,22 +22,19 @@ namespace Qforte
             Application.Exit();
         }
 
-        private void btManageEmployee_Click(object sender, EventArgs e)
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void btManage_Click(object sender, EventArgs e)
         {
             FormManageEmp formManageEmp = new FormManageEmp();
             formManageEmp.TopLevel = false;
             mainpanel.Controls.Add(formManageEmp);
             formManageEmp.BringToFront();
             formManageEmp.Show();
-
         }
-
-        private void mainpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btViewEmployee_Click(object sender, EventArgs e)
+        private void btViewEmp_Click(object sender, EventArgs e)
         {
             FormViewEmp formViewEmp = new FormViewEmp();
             formViewEmp.TopLevel = false;
@@ -45,7 +42,6 @@ namespace Qforte
             formViewEmp.BringToFront();
             formViewEmp.Show();
         }
-
         private void btSalary_Click(object sender, EventArgs e)
         {
             FormSal formSal = new FormSal();
@@ -62,6 +58,15 @@ namespace Qforte
             mainpanel.Controls.Add(formAttend);
             formAttend.BringToFront();
             formAttend.Show();
+        }
+
+        private void btRequest_Click(object sender, EventArgs e)
+        {
+            FormMess mess = new FormMess();
+            mess.TopLevel = false;
+            mainpanel.Controls.Add(mess);
+            mess.BringToFront();
+            mess.Show();
         }
     }
 }

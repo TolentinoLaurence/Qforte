@@ -51,13 +51,37 @@ namespace Qforte
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             FormViewProf formViewProf = new FormViewProf();
             formViewProf.TopLevel = false;
             mainpanel.Controls.Add(formViewProf);
             formViewProf.BringToFront();
             formViewProf.Show();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            FormAttendEmp form1 = new FormAttendEmp();
+            form1.TopLevel = false;
+            mainpanel.Controls.Add(form1);
+            form1.BringToFront();
+            form1.Show();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+
+            FormMessEmp Fmess = new FormMessEmp();
+            Fmess.TopLevel = false;
+            mainpanel.Controls.Add(Fmess);
+            Fmess.BringToFront();
+            Fmess.Show();
         }
     }
 }

@@ -39,12 +39,18 @@
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,11 +60,30 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormMessEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessEmp.Designer.cs">
+      <DependentUpon>FormMessEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMess.Designer.cs">
+      <DependentUpon>FormMess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAttendEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAttendEmp.Designer.cs">
+      <DependentUpon>FormAttendEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViewProf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +108,6 @@
     </Compile>
     <Compile Include="QforteEmployee.Designer.cs">
       <DependentUpon>QforteEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMessage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMessage.Designer.cs">
-      <DependentUpon>FormMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAttend.cs">
       <SubType>Form</SubType>
@@ -134,6 +153,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMessEmp.resx">
+      <DependentUpon>FormMessEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMess.resx">
+      <DependentUpon>FormMess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAttendEmp.resx">
+      <DependentUpon>FormAttendEmp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormViewProf.resx">
       <DependentUpon>FormViewProf.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QforteEmployee.resx">
       <DependentUpon>QforteEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMessage.resx">
-      <DependentUpon>FormMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAttend.resx">
       <DependentUpon>FormAttend.cs</DependentUpon>
@@ -178,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -192,6 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-message-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,17 +36,15 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.sidebartransmission1 = new System.Windows.Forms.Timer(this.components);
             this.menupanel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.menupanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,98 +99,100 @@
             this.menupanel1.BackColor = System.Drawing.Color.DimGray;
             this.menupanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menupanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.menupanel1.Controls.Add(this.pictureBox1);
-            this.menupanel1.Controls.Add(this.button7);
-            this.menupanel1.Controls.Add(this.button1);
-            this.menupanel1.Controls.Add(this.button3);
-            this.menupanel1.Controls.Add(this.button6);
-            this.menupanel1.Controls.Add(this.button5);
+            this.menupanel1.Controls.Add(this.iconButton5);
+            this.menupanel1.Controls.Add(this.iconButton1);
+            this.menupanel1.Controls.Add(this.iconButton4);
+            this.menupanel1.Controls.Add(this.iconButton2);
+            this.menupanel1.Controls.Add(this.iconButton3);
             this.menupanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menupanel1.Location = new System.Drawing.Point(0, 43);
             this.menupanel1.Name = "menupanel1";
             this.menupanel1.Size = new System.Drawing.Size(183, 459);
             this.menupanel1.TabIndex = 6;
             // 
-            // pictureBox1
+            // iconButton5
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.iconButton5.BackColor = System.Drawing.Color.DimGray;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton5.ForeColor = System.Drawing.Color.White;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.CalendarDay;
+            this.iconButton5.IconColor = System.Drawing.Color.Black;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(4, 392);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(174, 59);
+            this.iconButton5.TabIndex = 4;
+            this.iconButton5.Text = "Calendar";
+            this.iconButton5.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // iconButton1
             // 
-            this.button7.BackColor = System.Drawing.Color.DimGray;
-            this.button7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 379);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(174, 59);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "         Callendar";
-            this.button7.UseVisualStyleBackColor = false;
+            this.iconButton1.BackColor = System.Drawing.Color.DimGray;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(4, 105);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(174, 59);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.Text = "Home";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // button1
+            // iconButton4
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(4, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 57);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "  Home";
-            this.button1.UseVisualStyleBackColor = false;
+            this.iconButton4.BackColor = System.Drawing.Color.DimGray;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Envelope;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(4, 320);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(174, 59);
+            this.iconButton4.TabIndex = 3;
+            this.iconButton4.Text = "Request";
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // button3
+            // iconButton2
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 172);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 59);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "          My Profile";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.iconButton2.BackColor = System.Drawing.Color.DimGray;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(4, 176);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(174, 59);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "My Profile";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // button6
+            // iconButton3
             // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 310);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(174, 59);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "       Request";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DimGray;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 241);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(174, 59);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "            Attendance";
-            this.button5.UseVisualStyleBackColor = false;
+            this.iconButton3.BackColor = System.Drawing.Color.DimGray;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ClipboardUser;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(4, 248);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(174, 59);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "Attendance";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // mainpanel
             // 
@@ -211,6 +211,7 @@
             this.Controls.Add(this.menupanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QforteEmployee";
             this.Text = "Form1";
@@ -219,7 +220,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.menupanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,12 +232,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Timer sidebartransmission1;
         private System.Windows.Forms.Panel menupanel1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel mainpanel;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }
