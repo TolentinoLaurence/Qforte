@@ -17,15 +17,6 @@ namespace Qforte
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void mainpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void btManage_Click(object sender, EventArgs e)
         {
             FormManageEmp formManageEmp = new FormManageEmp();
@@ -67,6 +58,21 @@ namespace Qforte
             mainpanel.Controls.Add(mess);
             mess.BringToFront();
             mess.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            FormHome formhome = new FormHome();
+            formhome.TopLevel = false;
+            mainpanel.Controls.Add(formhome);
+            formhome.BringToFront();
+            formhome.Show();
+
         }
     }
 }

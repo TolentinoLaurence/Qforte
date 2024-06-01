@@ -36,17 +36,18 @@ namespace Qforte
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            circularProgressBar1.Value += 5;
+            circularProgressBar1.Value += 2;
             if (circularProgressBar1.Value == 100)
             {
                 timer1.Enabled = false;
+
                 FormLog formlog = new FormLog();
                 formlog.Show();
                 this.Hide();
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void circularProgressBar1_Click(object sender, EventArgs e)
         {
 
         }

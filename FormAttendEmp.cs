@@ -42,6 +42,8 @@ namespace Qforte
             MessageBox.Show("Successfully Registered");
             conn.Close();
             bind_data();
+
+            MessageBox.Show("Your request has been sumbmited successfully");
         }
 
         private void Form1_Load(object sender, EventArgs e)

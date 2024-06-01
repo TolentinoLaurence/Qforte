@@ -47,7 +47,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 71);
+            this.label1.Location = new System.Drawing.Point(56, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 22);
             this.label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(294, 71);
+            this.label2.Location = new System.Drawing.Point(294, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 22);
             this.label2.TabIndex = 1;
@@ -96,7 +96,7 @@
             // txtEmployee_ID
             // 
             this.txtEmployee_ID.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployee_ID.Location = new System.Drawing.Point(60, 96);
+            this.txtEmployee_ID.Location = new System.Drawing.Point(60, 124);
             this.txtEmployee_ID.Name = "txtEmployee_ID";
             this.txtEmployee_ID.Size = new System.Drawing.Size(185, 25);
             this.txtEmployee_ID.TabIndex = 5;
@@ -104,7 +104,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(298, 96);
+            this.txtName.Location = new System.Drawing.Point(298, 124);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(185, 25);
             this.txtName.TabIndex = 6;
@@ -116,6 +116,8 @@
             this.txtTime_In.Name = "txtTime_In";
             this.txtTime_In.Size = new System.Drawing.Size(185, 25);
             this.txtTime_In.TabIndex = 7;
+            this.txtTime_In.Text = "00:00";
+            this.txtTime_In.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTime_Out
             // 
@@ -124,6 +126,8 @@
             this.txtTime_Out.Name = "txtTime_Out";
             this.txtTime_Out.Size = new System.Drawing.Size(185, 25);
             this.txtTime_Out.TabIndex = 8;
+            this.txtTime_Out.Text = "00:00";
+            this.txtTime_Out.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDate
             // 
@@ -132,11 +136,13 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(185, 25);
             this.txtDate.TabIndex = 9;
+            this.txtDate.Text = "01-01-2024";
+            this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPosition
             // 
             this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(552, 96);
+            this.txtPosition.Location = new System.Drawing.Point(552, 124);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(185, 25);
             this.txtPosition.TabIndex = 11;
@@ -145,7 +151,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(548, 71);
+            this.label6.Location = new System.Drawing.Point(548, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 22);
             this.label6.TabIndex = 10;
@@ -153,19 +159,22 @@
             // 
             // btSubmit
             // 
-            this.btSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSubmit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btSubmit.Location = new System.Drawing.Point(60, 286);
             this.btSubmit.Name = "btSubmit";
             this.btSubmit.Size = new System.Drawing.Size(185, 49);
             this.btSubmit.TabIndex = 12;
             this.btSubmit.Text = "Submit";
-            this.btSubmit.UseVisualStyleBackColor = true;
+            this.btSubmit.UseVisualStyleBackColor = false;
             this.btSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // FormAttendEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(787, 440);
             this.Controls.Add(this.btSubmit);
             this.Controls.Add(this.txtPosition);
@@ -181,7 +190,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FormAttendEmp";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

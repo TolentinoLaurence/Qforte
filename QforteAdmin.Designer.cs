@@ -124,6 +124,7 @@
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.DimGray;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.House;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -134,6 +135,7 @@
             this.iconButton1.TabIndex = 10;
             this.iconButton1.Text = "Home";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btCal
             // 
@@ -226,7 +228,6 @@
             // 
             // mainpanel
             // 
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(184, 43);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(803, 479);

@@ -91,6 +91,8 @@ namespace Qforte
 
                 // Display information in RichTextBox
                 SalarySlip.Clear();
+                SalarySlip.AppendText("QForte Employee Eployment\n");
+                SalarySlip.AppendText("-------------------------------------------\n");
                 SalarySlip.AppendText("Employee ID: " + txtEmployee_ID.Text + "\n");
                 SalarySlip.AppendText("Name: " + txtname.Text + "\n");
                 SalarySlip.AppendText("Position: " + txtPosition.Text + "\n");

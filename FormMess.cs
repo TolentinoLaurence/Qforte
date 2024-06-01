@@ -14,8 +14,6 @@ namespace Qforte
 {
     public partial class FormMess : Form
     {
-        public event EventHandler RowApproved;
-        public event EventHandler RowDeclined;
         public FormMess()
         {
             InitializeComponent();
@@ -29,12 +27,13 @@ namespace Qforte
 
         private void btApprove_Click_1(object sender, EventArgs e)
         {
-            RowApproved?.Invoke(this, EventArgs.Empty);
+            SqlCommand cmd = new SqlCommand();
+            MessageBox.Show("Your request has been approved");
         }
 
         private void btDecline_Click(object sender, EventArgs e)
         {
-            RowDeclined?.Invoke(this, EventArgs.Empty);
+
         }
     }
 }
