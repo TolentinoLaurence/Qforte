@@ -15,9 +15,20 @@ namespace Qforte
         public QforteAdmin()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.Paint += MainForm_Paint;
         }
 
-        private void btManage_Click(object sender, EventArgs e)
+        private void MainForm_Paint(object sender, PaintEventArgs e)
+        {
+            // Draw a custom border
+            using (Pen borderPen = new Pen(Color.DarkSlateBlue)) // Change color and thickness here
+            {
+                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width - 1, this.Height - 1);
+            }
+        }
+
+            private void btManage_Click(object sender, EventArgs e)
         {
             FormManageEmp formManageEmp = new FormManageEmp();
             formManageEmp.TopLevel = false;
@@ -60,11 +71,6 @@ namespace Qforte
             mess.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
             FormHome formhome = new FormHome();
@@ -73,6 +79,16 @@ namespace Qforte
             formhome.BringToFront();
             formhome.Show();
 
+        }
+
+
+        private void btCal_Click(object sender, EventArgs e)
+        {
+            Calendar calendar = new Calendar();
+            calendar.TopLevel = false;
+            mainpanel.Controls.Add(calendar);
+            calendar.BringToFront();
+            calendar.Show();
         }
     }
 }

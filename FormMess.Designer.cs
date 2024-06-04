@@ -46,7 +46,7 @@
             this.btApprove.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btApprove.IconColor = System.Drawing.Color.Black;
             this.btApprove.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btApprove.Location = new System.Drawing.Point(411, 395);
+            this.btApprove.Location = new System.Drawing.Point(440, 408);
             this.btApprove.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btApprove.Name = "btApprove";
             this.btApprove.Size = new System.Drawing.Size(114, 41);
@@ -62,7 +62,7 @@
             this.btDecline.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btDecline.IconColor = System.Drawing.Color.Black;
             this.btDecline.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btDecline.Location = new System.Drawing.Point(533, 395);
+            this.btDecline.Location = new System.Drawing.Point(562, 408);
             this.btDecline.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btDecline.Name = "btDecline";
             this.btDecline.Size = new System.Drawing.Size(114, 41);
@@ -78,13 +78,14 @@
             this.btDelete.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btDelete.IconColor = System.Drawing.Color.Black;
             this.btDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btDelete.Location = new System.Drawing.Point(655, 395);
+            this.btDelete.Location = new System.Drawing.Point(684, 408);
             this.btDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(114, 41);
             this.btDelete.TabIndex = 2;
             this.btDelete.Text = "DELETE";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // dataGridView1
             // 
@@ -92,10 +93,10 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 86);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(735, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(768, 294);
             this.dataGridView1.TabIndex = 3;
             // 
             // label1
@@ -124,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 479);
+            this.ClientSize = new System.Drawing.Size(820, 539);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -136,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormMess";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FormMess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

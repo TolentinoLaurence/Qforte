@@ -21,10 +21,6 @@ namespace Qforte
         }
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-BOTTGEF\\SQLEXPRESS;Initial Catalog=database;Integrated Security=True;");
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -90,6 +86,14 @@ namespace Qforte
         private void FormLog_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to exit application","Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -52,6 +52,7 @@ namespace Qforte
             MessageBox.Show("Successfully Registered");
             conn.Close();
             bind_data();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

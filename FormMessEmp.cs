@@ -17,8 +17,6 @@ namespace Qforte
         {
             InitializeComponent();
             FormMess formMess = new FormMess();
-            formMess.RowApproved += formMess_RowApproved;
-            formMess.RowDeclined += formMess_RowDeclined;
         }
         private void formMess_RowApproved(object sender, EventArgs e)
         {

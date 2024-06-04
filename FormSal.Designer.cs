@@ -49,6 +49,7 @@
             // btFetchData
             // 
             this.btFetchData.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btFetchData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btFetchData.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFetchData.ForeColor = System.Drawing.Color.White;
             this.btFetchData.Location = new System.Drawing.Point(259, 22);
@@ -73,16 +74,16 @@
             // 
             this.txtEmployee_ID.BackColor = System.Drawing.Color.Gainsboro;
             this.txtEmployee_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmployee_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployee_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployee_ID.Location = new System.Drawing.Point(85, 26);
             this.txtEmployee_ID.Name = "txtEmployee_ID";
-            this.txtEmployee_ID.Size = new System.Drawing.Size(168, 21);
+            this.txtEmployee_ID.Size = new System.Drawing.Size(168, 20);
             this.txtEmployee_ID.TabIndex = 32;
             // 
             // txtname
             // 
             this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtname.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(54, 92);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(185, 20);
@@ -101,7 +102,7 @@
             // txtPosition
             // 
             this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosition.Location = new System.Drawing.Point(55, 161);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(184, 20);
@@ -140,9 +141,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(116, 342);
+            this.button1.Location = new System.Drawing.Point(79, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 36);
             this.button1.TabIndex = 41;
@@ -153,6 +155,7 @@
             // btEditSal
             // 
             this.btEditSal.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btEditSal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEditSal.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditSal.ForeColor = System.Drawing.Color.White;
             this.btEditSal.Location = new System.Drawing.Point(680, 12);
@@ -166,9 +169,10 @@
             // btPrintData
             // 
             this.btPrintData.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btPrintData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btPrintData.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrintData.ForeColor = System.Drawing.Color.White;
-            this.btPrintData.Location = new System.Drawing.Point(553, 378);
+            this.btPrintData.Location = new System.Drawing.Point(556, 423);
             this.btPrintData.Name = "btPrintData";
             this.btPrintData.Size = new System.Drawing.Size(95, 30);
             this.btPrintData.TabIndex = 44;
@@ -213,7 +217,7 @@
             // 
             this.SalarySlip.Location = new System.Drawing.Point(409, 59);
             this.SalarySlip.Name = "SalarySlip";
-            this.SalarySlip.Size = new System.Drawing.Size(363, 301);
+            this.SalarySlip.Size = new System.Drawing.Size(363, 341);
             this.SalarySlip.TabIndex = 48;
             this.SalarySlip.Text = "";
             // 
@@ -222,7 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(802, 475);
+            this.ClientSize = new System.Drawing.Size(820, 539);
             this.Controls.Add(this.SalarySlip);
             this.Controls.Add(this.chbHDMF);
             this.Controls.Add(this.chbPHILHEALTH);

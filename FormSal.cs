@@ -51,30 +51,30 @@ namespace Qforte
 
         private void button1_Click(object sender, EventArgs e)
         {
-            float RatePerHour = 0;
+            float RatePerDay = 0;
 
             // Get the rate per hour based on position
             if (txtPosition.Text == "Crew")
             {
-                RatePerHour = GetRatePerHour("Crew");
+                RatePerDay = GetRatePerHour("Crew");
             }
             else if (txtPosition.Text == "Delivery Driver")
             {
-                RatePerHour = GetRatePerHour("Delivery_Driver");
+                RatePerDay = GetRatePerHour("Delivery_Driver");
             }
             else if (txtPosition.Text == "Delivery Helper")
             {
-                RatePerHour = GetRatePerHour("Delivery_Helper");
+                RatePerDay = GetRatePerHour("Delivery_Helper");
             }
             else if (txtPosition.Text == "Product Checker")
             {
-                RatePerHour = GetRatePerHour("Product_Checker");
+                RatePerDay = GetRatePerHour("Product_Checker");
             }
 
             float WorkDays = 0;
             if (float.TryParse(txtWork_day.Text, out WorkDays))
             {
-                float Salary = WorkDays * RatePerHour;
+                float Salary = WorkDays * RatePerDay;
 
                 if (cbhSSS.Checked)
                 {
@@ -96,7 +96,7 @@ namespace Qforte
                 SalarySlip.AppendText("Employee ID: " + txtEmployee_ID.Text + "\n");
                 SalarySlip.AppendText("Name: " + txtname.Text + "\n");
                 SalarySlip.AppendText("Position: " + txtPosition.Text + "\n");
-                SalarySlip.AppendText("Rate Per Hour: " + RatePerHour.ToString("0.00") + "\n");
+                SalarySlip.AppendText("Rate Per Hour: " + RatePerDay.ToString("0.00") + "\n");
                 SalarySlip.AppendText("Work Days: " + WorkDays.ToString() + "\n");
                 SalarySlip.AppendText("Salary: " + Salary.ToString("0.00") + "\n");
                 SalarySlip.Visible = true;

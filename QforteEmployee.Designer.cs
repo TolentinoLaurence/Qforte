@@ -32,19 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QforteEmployee));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.menu = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.sidebartransmission1 = new System.Windows.Forms.Timer(this.components);
             this.menupanel1 = new System.Windows.Forms.Panel();
+            this.mainpanel = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.mainpanel = new System.Windows.Forms.Panel();
+            this.menu = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.menupanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,17 +69,6 @@
             this.label1.Size = new System.Drawing.Size(377, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "QFORTE    |     EMPLOYEE MANAGEMENT SYSTEM";
-            // 
-            // menu
-            // 
-            this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
-            this.menu.Location = new System.Drawing.Point(25, 3);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(41, 37);
-            this.menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.menu.TabIndex = 0;
-            this.menu.TabStop = false;
-            this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -109,6 +98,14 @@
             this.menupanel1.Name = "menupanel1";
             this.menupanel1.Size = new System.Drawing.Size(183, 459);
             this.menupanel1.TabIndex = 6;
+            // 
+            // mainpanel
+            // 
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(183, 43);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(761, 459);
+            this.mainpanel.TabIndex = 7;
             // 
             // iconButton5
             // 
@@ -194,13 +191,16 @@
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // mainpanel
+            // menu
             // 
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(183, 43);
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(761, 459);
-            this.mainpanel.TabIndex = 7;
+            this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
+            this.menu.Location = new System.Drawing.Point(25, 3);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(41, 37);
+            this.menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.menu.TabIndex = 0;
+            this.menu.TabStop = false;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
             // QforteEmployee
             // 
@@ -218,8 +218,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.menupanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.ResumeLayout(false);
 
         }
