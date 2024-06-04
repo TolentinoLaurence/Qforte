@@ -45,7 +45,11 @@
             this.txtPhilhealth = new System.Windows.Forms.TextBox();
             this.txtSSS = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btUpdate
@@ -209,14 +213,40 @@
             this.panel1.Size = new System.Drawing.Size(727, 37);
             this.panel1.TabIndex = 62;
             // 
-            // panel2
+            // panel29
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 37);
-            this.panel2.TabIndex = 63;
+            this.panel29.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel29.Controls.Add(this.iconPictureBox1);
+            this.panel29.Controls.Add(this.label2);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(727, 55);
+            this.panel29.TabIndex = 63;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 42;
+            this.iconPictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(50, 42);
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(78, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Edit Salary";
             // 
             // FormEditSal
             // 
@@ -224,7 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(727, 521);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel29);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtHDMF);
             this.Controls.Add(this.txtPhilhealth);
@@ -245,6 +275,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditSal";
             this.Load += new System.EventHandler(this.FormEditSal_Load);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,6 +302,8 @@
         private System.Windows.Forms.TextBox txtPhilhealth;
         private System.Windows.Forms.TextBox txtSSS;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel29;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

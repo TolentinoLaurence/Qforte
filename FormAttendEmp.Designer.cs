@@ -41,6 +41,11 @@
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btSubmit = new System.Windows.Forms.Button();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -170,12 +175,48 @@
             this.btSubmit.UseVisualStyleBackColor = false;
             this.btSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel29.Controls.Add(this.iconPictureBox1);
+            this.panel29.Controls.Add(this.label7);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(787, 55);
+            this.panel29.TabIndex = 34;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ClipboardUser;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 42;
+            this.iconPictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(50, 42);
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(78, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 20);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Attendance";
+            // 
             // FormAttendEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(787, 440);
+            this.Controls.Add(this.panel29);
             this.Controls.Add(this.btSubmit);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label6);
@@ -193,6 +234,9 @@
             this.Name = "FormAttendEmp";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +257,8 @@
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btSubmit;
+        private System.Windows.Forms.Panel panel29;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

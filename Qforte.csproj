@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>databaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="databaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>databaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,13 +105,6 @@
     </Compile>
     <Compile Include="FormViewProf.Designer.cs">
       <DependentUpon>FormViewProf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEmpHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>FormEmpHome.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEditSal.cs">
       <SubType>Form</SubType>
@@ -164,11 +162,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Form1.cs">
+    <Compile Include="Resources\FormCalendar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Resources\FormCalendar.Designer.cs">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -190,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewProf.resx">
       <DependentUpon>FormViewProf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEmpHome.resx">
-      <DependentUpon>FormEmpHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditSal.resx">
       <DependentUpon>FormEditSal.cs</DependentUpon>
@@ -231,8 +226,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Resources\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Resources\FormCalendar.resx">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -247,6 +242,17 @@
     </None>
     <None Include="databaseDataSet.xss">
       <DependentUpon>databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="databaseDataSet1.xsc">
+      <DependentUpon>databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="databaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>databaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="databaseDataSet1.xss">
+      <DependentUpon>databaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

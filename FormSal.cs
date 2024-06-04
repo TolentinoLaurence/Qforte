@@ -91,14 +91,22 @@ namespace Qforte
 
                 // Display information in RichTextBox
                 SalarySlip.Clear();
-                SalarySlip.AppendText("QForte Employee Eployment\n");
-                SalarySlip.AppendText("-------------------------------------------\n");
-                SalarySlip.AppendText("Employee ID: " + txtEmployee_ID.Text + "\n");
-                SalarySlip.AppendText("Name: " + txtname.Text + "\n");
-                SalarySlip.AppendText("Position: " + txtPosition.Text + "\n");
-                SalarySlip.AppendText("Rate Per Hour: " + RatePerDay.ToString("0.00") + "\n");
-                SalarySlip.AppendText("Work Days: " + WorkDays.ToString() + "\n");
-                SalarySlip.AppendText("Salary: " + Salary.ToString("0.00") + "\n");
+                SalarySlip.AppendText("QForte Employee Employment\n");
+                SalarySlip.AppendText("-------------------------------------------------------------------------------------------------\n");
+                SalarySlip.AppendText("-------------------------------------------------------------------------------------------------\n");
+                SalarySlip.AppendText("\nEmployee ID: " + txtEmployee_ID.Text + "\n");
+                SalarySlip.AppendText("\nName: " + txtname.Text + "\n");
+                SalarySlip.AppendText("\nPosition: " + txtPosition.Text + "\n");
+                SalarySlip.AppendText("-------------------------------------------------------------------------------------------------\n");
+                SalarySlip.AppendText("\nnRate Per Hour: " + RatePerDay.ToString("0.00") + "\n");
+                SalarySlip.AppendText("\nnWork Days: " + WorkDays.ToString() + "\n");
+                SalarySlip.AppendText("\n" + "\n" + "\n");
+                SalarySlip.AppendText("\nDeduction:\n");
+                SalarySlip.AppendText("-------------------------------------------------------------------------------------------------\n");
+                SalarySlip.AppendText("\nnWork Days: " + WorkDays.ToString() + "\n");
+                SalarySlip.AppendText("\nSalary: " + Salary.ToString("0.00") + "\n");
+                SalarySlip.AppendText("-------------------------------------------------------------------------------------------------\n");
+                SalarySlip.AppendText("-------------------------------------------------------------------------------------------------\n");
                 SalarySlip.Visible = true;
             }
             else

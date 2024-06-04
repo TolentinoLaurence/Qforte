@@ -90,7 +90,7 @@ namespace Qforte
             cmd3.Parameters.AddWithValue("@Position", cbPosition.Text);
             cmd3.Parameters.AddWithValue("@Contact", float.Parse(txtcontact.Text));
             cmd3.Parameters.AddWithValue("@Address", txtaddress.Text);
-            cmd3.Parameters.AddWithValue("@BoD", txtbod.Text);
+            cmd3.Parameters.AddWithValue("@BoD", dateTimePicker1.Text);
             cmd3.Parameters.AddWithValue("@Password", txtpassword.Text);
             cmd3.Parameters.AddWithValue("@ID", txtemployee_ID.Text);
             conn.Open();
@@ -99,6 +99,7 @@ namespace Qforte
             conn.Close();
             bind_data();
         }
+
         private void Delete_Click(object sender, EventArgs e)
         {
             SqlCommand cmd4 = new SqlCommand("Delete from Employee where ID=@ID", conn);

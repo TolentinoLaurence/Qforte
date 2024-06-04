@@ -21,7 +21,7 @@ namespace Qforte.Resources
             _day = day;
             label1.Text = _day;
             checkBox1.Hide();
-            date = Form1._month + "/" + _day + "/" + Form1._year;
+            date = FormCalendar._month + "/" + _day + "/" + FormCalendar._year;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

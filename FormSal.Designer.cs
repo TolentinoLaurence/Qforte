@@ -44,6 +44,11 @@
             this.chbPHILHEALTH = new System.Windows.Forms.CheckBox();
             this.chbHDMF = new System.Windows.Forms.CheckBox();
             this.SalarySlip = new System.Windows.Forms.RichTextBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btFetchData
@@ -52,7 +57,7 @@
             this.btFetchData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btFetchData.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFetchData.ForeColor = System.Drawing.Color.White;
-            this.btFetchData.Location = new System.Drawing.Point(259, 22);
+            this.btFetchData.Location = new System.Drawing.Point(262, 75);
             this.btFetchData.Name = "btFetchData";
             this.btFetchData.Size = new System.Drawing.Size(92, 30);
             this.btFetchData.TabIndex = 34;
@@ -64,7 +69,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(50, 26);
+            this.label10.Location = new System.Drawing.Point(53, 79);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 22);
             this.label10.TabIndex = 33;
@@ -75,7 +80,7 @@
             this.txtEmployee_ID.BackColor = System.Drawing.Color.Gainsboro;
             this.txtEmployee_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployee_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployee_ID.Location = new System.Drawing.Point(85, 26);
+            this.txtEmployee_ID.Location = new System.Drawing.Point(88, 79);
             this.txtEmployee_ID.Name = "txtEmployee_ID";
             this.txtEmployee_ID.Size = new System.Drawing.Size(168, 20);
             this.txtEmployee_ID.TabIndex = 32;
@@ -84,7 +89,7 @@
             // 
             this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtname.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(54, 92);
+            this.txtname.Location = new System.Drawing.Point(57, 145);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(185, 20);
             this.txtname.TabIndex = 36;
@@ -93,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 70);
+            this.label2.Location = new System.Drawing.Point(54, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 19);
             this.label2.TabIndex = 35;
@@ -103,7 +108,7 @@
             // 
             this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(55, 161);
+            this.txtPosition.Location = new System.Drawing.Point(58, 214);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(184, 20);
             this.txtPosition.TabIndex = 38;
@@ -112,7 +117,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 133);
+            this.label5.Location = new System.Drawing.Point(55, 186);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 19);
             this.label5.TabIndex = 37;
@@ -122,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 201);
+            this.label1.Location = new System.Drawing.Point(54, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 19);
             this.label1.TabIndex = 39;
@@ -132,7 +137,7 @@
             // 
             this.txtWork_day.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtWork_day.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWork_day.Location = new System.Drawing.Point(54, 228);
+            this.txtWork_day.Location = new System.Drawing.Point(57, 281);
             this.txtWork_day.Name = "txtWork_day";
             this.txtWork_day.Size = new System.Drawing.Size(130, 27);
             this.txtWork_day.TabIndex = 40;
@@ -144,7 +149,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(79, 343);
+            this.button1.Location = new System.Drawing.Point(88, 417);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 36);
             this.button1.TabIndex = 41;
@@ -158,7 +163,7 @@
             this.btEditSal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEditSal.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditSal.ForeColor = System.Drawing.Color.White;
-            this.btEditSal.Location = new System.Drawing.Point(680, 12);
+            this.btEditSal.Location = new System.Drawing.Point(683, 75);
             this.btEditSal.Name = "btEditSal";
             this.btEditSal.Size = new System.Drawing.Size(92, 36);
             this.btEditSal.TabIndex = 43;
@@ -172,7 +177,7 @@
             this.btPrintData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btPrintData.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrintData.ForeColor = System.Drawing.Color.White;
-            this.btPrintData.Location = new System.Drawing.Point(556, 423);
+            this.btPrintData.Location = new System.Drawing.Point(559, 476);
             this.btPrintData.Name = "btPrintData";
             this.btPrintData.Size = new System.Drawing.Size(95, 30);
             this.btPrintData.TabIndex = 44;
@@ -184,7 +189,7 @@
             // 
             this.cbhSSS.AutoSize = true;
             this.cbhSSS.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbhSSS.Location = new System.Drawing.Point(52, 274);
+            this.cbhSSS.Location = new System.Drawing.Point(57, 342);
             this.cbhSSS.Name = "cbhSSS";
             this.cbhSSS.Size = new System.Drawing.Size(47, 20);
             this.cbhSSS.TabIndex = 45;
@@ -195,7 +200,7 @@
             // 
             this.chbPHILHEALTH.AutoSize = true;
             this.chbPHILHEALTH.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbPHILHEALTH.Location = new System.Drawing.Point(133, 274);
+            this.chbPHILHEALTH.Location = new System.Drawing.Point(142, 342);
             this.chbPHILHEALTH.Name = "chbPHILHEALTH";
             this.chbPHILHEALTH.Size = new System.Drawing.Size(97, 20);
             this.chbPHILHEALTH.TabIndex = 46;
@@ -206,7 +211,7 @@
             // 
             this.chbHDMF.AutoSize = true;
             this.chbHDMF.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbHDMF.Location = new System.Drawing.Point(255, 274);
+            this.chbHDMF.Location = new System.Drawing.Point(271, 342);
             this.chbHDMF.Name = "chbHDMF";
             this.chbHDMF.Size = new System.Drawing.Size(61, 20);
             this.chbHDMF.TabIndex = 47;
@@ -215,11 +220,48 @@
             // 
             // SalarySlip
             // 
-            this.SalarySlip.Location = new System.Drawing.Point(409, 59);
+            this.SalarySlip.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.SalarySlip.Location = new System.Drawing.Point(412, 123);
             this.SalarySlip.Name = "SalarySlip";
-            this.SalarySlip.Size = new System.Drawing.Size(363, 341);
+            this.SalarySlip.Size = new System.Drawing.Size(363, 330);
             this.SalarySlip.TabIndex = 48;
             this.SalarySlip.Text = "";
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel29.Controls.Add(this.iconPictureBox1);
+            this.panel29.Controls.Add(this.label3);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(820, 55);
+            this.panel29.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(92, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Salary";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 51;
+            this.iconPictureBox1.Location = new System.Drawing.Point(26, 4);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(60, 51);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
             // 
             // FormSal
             // 
@@ -227,6 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(820, 539);
+            this.Controls.Add(this.panel29);
             this.Controls.Add(this.SalarySlip);
             this.Controls.Add(this.chbHDMF);
             this.Controls.Add(this.chbPHILHEALTH);
@@ -247,6 +290,9 @@
             this.Name = "FormSal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormSal_Load);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +316,8 @@
         private System.Windows.Forms.CheckBox chbPHILHEALTH;
         private System.Windows.Forms.CheckBox chbHDMF;
         private System.Windows.Forms.RichTextBox SalarySlip;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

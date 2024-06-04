@@ -29,27 +29,10 @@ namespace Qforte
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-        private void btApprove_Click_1(object sender, EventArgs e)
-        {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MessageRequest", conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            MessageBox.Show("Your request has been approved");
-        }
-
-        private void btDecline_Click(object sender, EventArgs e)
-        {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MessageRequest", conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            MessageBox.Show("Your request has been Declined");
-        }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd1 = new SqlCommand("Delete from MessageRequest where ID=@ID", conn);
+            SqlCommand cmd1 = new SqlCommand("Delete * from MessageRequest where ID=@ID", conn);
             cmd1.Parameters.AddWithValue("ID", dataGridView1.Rows);
             conn.Open();
             cmd1.ExecuteNonQuery();

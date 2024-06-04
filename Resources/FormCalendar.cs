@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace Qforte.Resources
 {
-    public partial class Form1 : Form
+    public partial class FormCalendar : Form
     {
         public static int _year,_month;
-        public Form1()
+        public FormCalendar()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Calendar_Load(object sender, EventArgs e)
         {
             showDays(DateTime.Now.Month, DateTime.Now.Year);
         }
@@ -38,14 +38,14 @@ namespace Qforte.Resources
 
             for (int i = 1; i < week; i++)
             {
-                UserControl1 uc1 = new UserControl1(" ");
+                UserControl1 uc1 = new UserControl1(i + " ");
                 flowLayoutPanel1.Controls.Add(uc1);
-
             }
             for (int i = 1; i < day; i++)
             {
-                UserControl1 uc1 = new UserControl1(i + " ");
+                UserControl1 uc1 = new UserControl1(" ");
                 flowLayoutPanel1.Controls.Add(uc1);
+
 
             }
 

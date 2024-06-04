@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -65,19 +66,6 @@ namespace Qforte
         private void FormViewProf_Load(object sender, EventArgs e)
         {
             fetchdata();
-            bind_data();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SqlCommand cmd2 = new SqlCommand("Update Employee Set Contact=@Contact,Address=@Address,Password=@Password Where ID=@ID", conn);         
-            cmd2.Parameters.AddWithValue("@Contact", float.Parse(txtContact.Text));
-            cmd2.Parameters.AddWithValue("@Address", txtAddress.Text);
-            cmd2.Parameters.AddWithValue("@Password", txtPassword.Text);
-            conn.Open();
-            cmd2.ExecuteNonQuery();
-            MessageBox.Show("Successfully Updated");
-            conn.Close();
             bind_data();
         }
     }

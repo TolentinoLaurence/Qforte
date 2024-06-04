@@ -53,7 +53,11 @@ namespace Qforte
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-
+            FormHome formHome = new FormHome();
+            formHome.TopLevel = false;
+            mainpanel.Controls.Add(formHome);
+            formHome.BringToFront();
+            formHome.Show();
         }
 
         private void iconButton2_Click(object sender, EventArgs e)

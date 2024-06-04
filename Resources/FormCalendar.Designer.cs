@@ -1,6 +1,6 @@
 ﻿namespace Qforte.Resources
 {
-    partial class Form1
+    partial class FormCalendar
     {
         /// <summary>
         /// Required designer variable.
@@ -235,7 +235,6 @@
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Text = "calendar";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -31,12 +31,13 @@ namespace Qforte
             dt.Clear();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Position As Position,Time_In As Time_In,Time_Out As Time_Out,Date As Date from Attendance where ID Like @ID+'%'", conn);
-            cmd1.Parameters.AddWithValue("ID", txtEmployee_ID.Text);
+            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Position As Position,Time_In As Time_In,Time_Out As Time_Out,Date As Date from Attendance where Date Like @Date+'%'", conn);
+            cmd1.Parameters.AddWithValue("Date", txtDate.Text);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd1;
             DataTable dt = new DataTable();
