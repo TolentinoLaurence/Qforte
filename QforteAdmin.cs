@@ -84,7 +84,7 @@ namespace Qforte
 
         private void btCal_Click(object sender, EventArgs e)
         {
-            Calendar calendar = new Calendar();
+            Form1 calendar = new Form1();
             calendar.TopLevel = false;
             mainpanel.Controls.Add(calendar);
             calendar.BringToFront();
