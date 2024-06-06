@@ -38,12 +38,12 @@
             this.txtTime_In = new System.Windows.Forms.TextBox();
             this.txtTime_Out = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
-            this.txtPosition = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btSubmit = new System.Windows.Forms.Button();
             this.panel29 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -141,16 +141,8 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(185, 25);
             this.txtDate.TabIndex = 9;
-            this.txtDate.Text = "01-01-2024";
+            this.txtDate.Text = "06/05/2024";
             this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(552, 124);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(185, 25);
-            this.txtPosition.TabIndex = 11;
             // 
             // label6
             // 
@@ -210,15 +202,31 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Attendance";
             // 
+            // cbPosition
+            // 
+            this.cbPosition.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Items.AddRange(new object[] {
+            "Crew",
+            "Product Checker",
+            "Delivery Driver",
+            "Delivery Helper"});
+            this.cbPosition.Location = new System.Drawing.Point(552, 124);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(185, 24);
+            this.cbPosition.TabIndex = 35;
+            this.cbPosition.Text = "Crew";
+            // 
             // FormAttendEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(787, 440);
+            this.Controls.Add(this.cbPosition);
             this.Controls.Add(this.panel29);
             this.Controls.Add(this.btSubmit);
-            this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtTime_Out);
@@ -254,11 +262,11 @@
         private System.Windows.Forms.TextBox txtTime_In;
         private System.Windows.Forms.TextBox txtTime_Out;
         private System.Windows.Forms.TextBox txtDate;
-        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btSubmit;
         private System.Windows.Forms.Panel panel29;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbPosition;
     }
 }

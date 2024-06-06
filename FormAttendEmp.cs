@@ -33,7 +33,7 @@ namespace Qforte
             SqlCommand cmd = new SqlCommand("Insert into Attendance(ID,Name,Position,Time_In,Time_Out,Date)Values(@ID,@Name,@Position,@Time_In,@Time_Out,@Date)",conn);
             cmd.Parameters.AddWithValue("ID", txtEmployee_ID.Text);
             cmd.Parameters.AddWithValue("Name", txtName.Text);
-            cmd.Parameters.AddWithValue("Position", txtPosition.Text);
+            cmd.Parameters.AddWithValue("Position", cbPosition.Text);
             cmd.Parameters.AddWithValue("Time_In", txtTime_In.Text);
             cmd.Parameters.AddWithValue("Time_Out", txtTime_Out.Text);
             cmd.Parameters.AddWithValue("Date", txtDate.Text);

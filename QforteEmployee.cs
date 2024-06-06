@@ -87,5 +87,15 @@ namespace Qforte
             Fmess.BringToFront();
             Fmess.Show();
         }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormLog formLog = new FormLog();
+                formLog.Show();
+                this.Hide();
+            }
+        }
     }
 }

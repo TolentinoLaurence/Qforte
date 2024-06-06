@@ -42,7 +42,7 @@ namespace Qforte
             da.SelectCommand = cmd1;
             DataTable dt = new DataTable();
             dt.Clear();
-            da.Fill(dt);
+            da.Fill(dt); 
             dataGridView1.DataSource = dt;
         }
     }

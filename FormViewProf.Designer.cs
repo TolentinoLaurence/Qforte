@@ -46,16 +46,20 @@
             this.txtEmployee_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
             // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(192, 351);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(130, 25);
+            this.txtPassword.Size = new System.Drawing.Size(130, 18);
             this.txtPassword.TabIndex = 45;
             // 
             // label8
@@ -70,11 +74,11 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(191, 292);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(231, 25);
+            this.txtAddress.Size = new System.Drawing.Size(231, 18);
             this.txtAddress.TabIndex = 43;
             // 
             // label9
@@ -89,11 +93,11 @@
             // 
             // txtBod
             // 
-            this.txtBod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBod.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBod.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBod.Location = new System.Drawing.Point(481, 292);
             this.txtBod.Name = "txtBod";
-            this.txtBod.Size = new System.Drawing.Size(130, 25);
+            this.txtBod.Size = new System.Drawing.Size(130, 18);
             this.txtBod.TabIndex = 41;
             // 
             // label6
@@ -108,20 +112,20 @@
             // 
             // txtContact
             // 
-            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContact.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContact.Location = new System.Drawing.Point(480, 228);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(130, 25);
+            this.txtContact.Size = new System.Drawing.Size(130, 18);
             this.txtContact.TabIndex = 39;
             // 
             // txtPosition
             // 
-            this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosition.Location = new System.Drawing.Point(190, 228);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(130, 25);
+            this.txtPosition.Size = new System.Drawing.Size(130, 18);
             this.txtPosition.TabIndex = 38;
             // 
             // label7
@@ -146,20 +150,20 @@
             // 
             // txtAge
             // 
-            this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAge.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.Location = new System.Drawing.Point(189, 162);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(130, 25);
+            this.txtAge.Size = new System.Drawing.Size(130, 18);
             this.txtAge.TabIndex = 35;
             // 
             // txtGender
             // 
-            this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGender.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Location = new System.Drawing.Point(479, 162);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(130, 25);
+            this.txtGender.Size = new System.Drawing.Size(130, 18);
             this.txtGender.TabIndex = 34;
             // 
             // label4
@@ -184,20 +188,20 @@
             // 
             // txtEmployee_name
             // 
-            this.txtEmployee_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmployee_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployee_name.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployee_name.Location = new System.Drawing.Point(479, 102);
             this.txtEmployee_name.Name = "txtEmployee_name";
-            this.txtEmployee_name.Size = new System.Drawing.Size(130, 25);
+            this.txtEmployee_name.Size = new System.Drawing.Size(130, 18);
             this.txtEmployee_name.TabIndex = 31;
             // 
             // txtEmployee_ID
             // 
-            this.txtEmployee_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmployee_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployee_ID.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployee_ID.Location = new System.Drawing.Point(189, 102);
             this.txtEmployee_ID.Name = "txtEmployee_ID";
-            this.txtEmployee_ID.Size = new System.Drawing.Size(130, 25);
+            this.txtEmployee_ID.Size = new System.Drawing.Size(130, 18);
             this.txtEmployee_ID.TabIndex = 30;
             // 
             // label2
@@ -220,24 +224,47 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Employee ID";
             // 
-            // button2
+            // panel29
             // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(644, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 37);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.panel29.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel29.Controls.Add(this.iconPictureBox1);
+            this.panel29.Controls.Add(this.label10);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(761, 55);
+            this.panel29.TabIndex = 46;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 49;
+            this.iconPictureBox1.Location = new System.Drawing.Point(26, 3);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(58, 49);
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(90, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 20);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "View Profile";
             // 
             // FormViewProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 459);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel29);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAddress);
@@ -260,6 +287,9 @@
             this.Name = "FormViewProf";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormViewProf_Load);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +315,8 @@
         private System.Windows.Forms.TextBox txtEmployee_ID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel29;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

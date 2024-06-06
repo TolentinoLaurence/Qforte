@@ -42,7 +42,7 @@ namespace Qforte
                     lblPosition.Text = dr["Position"].ToString();
                     lblContact.Text = dr["Contact"].ToString();
                     lblAddress.Text = dr["Address"].ToString();
-                    lblBirthday.Text = dr["BoD"].ToString();
+                    lblBirthday.Text = dr["Birthday"].ToString();
                     lblEmployeeID.Visible = true;
                     lblName.Visible = true;
                     lblAge.Visible = true;

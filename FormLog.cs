@@ -33,9 +33,21 @@ namespace Qforte
             }
         }
 
-        private void btLogin_Click(object sender, EventArgs e)
+        private void FormLog_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to exit application","Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
             string user, password;
             user = txtUser_ID.Text;
             password = txtpassword.Text;
@@ -43,7 +55,7 @@ namespace Qforte
             try
             {
                 string querry = "Select * from Employee where ID = '" + txtUser_ID.Text + "' and Password = '" + txtpassword.Text + "'";
-                SqlDataAdapter da = new SqlDataAdapter(querry,conn);
+                SqlDataAdapter da = new SqlDataAdapter(querry, conn);
 
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -72,27 +84,13 @@ namespace Qforte
                     txtUser_ID.Focus();
                 }
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Error");
             }
             finally
             {
                 conn.Close();
-            }
-            
-        }
-
-        private void FormLog_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you want to exit application","Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
             }
         }
     }

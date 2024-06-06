@@ -39,9 +39,11 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.txtFrom = new System.Windows.Forms.TextBox();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +82,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(443, 82);
+            this.label4.Location = new System.Drawing.Point(512, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 19);
             this.label4.TabIndex = 3;
@@ -114,16 +116,16 @@
             // 
             // txtEmployee_ID
             // 
-            this.txtEmployee_ID.Location = new System.Drawing.Point(149, 83);
+            this.txtEmployee_ID.Location = new System.Drawing.Point(82, 82);
             this.txtEmployee_ID.Name = "txtEmployee_ID";
-            this.txtEmployee_ID.Size = new System.Drawing.Size(205, 20);
+            this.txtEmployee_ID.Size = new System.Drawing.Size(176, 20);
             this.txtEmployee_ID.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(78, 84);
+            this.label5.Location = new System.Drawing.Point(46, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 19);
             this.label5.TabIndex = 9;
@@ -164,37 +166,60 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Message Request";
             // 
-            // dateTimePicker1
+            // txtName
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(514, 84);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(205, 20);
-            this.dateTimePicker1.TabIndex = 31;
+            this.txtName.Location = new System.Drawing.Point(330, 80);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(176, 20);
+            this.txtName.TabIndex = 35;
             // 
-            // dateTimePicker2
+            // label6
             // 
-            this.dateTimePicker2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dateTimePicker2.Location = new System.Drawing.Point(149, 127);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(205, 20);
-            this.dateTimePicker2.TabIndex = 32;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(265, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 19);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Name:";
             // 
-            // dateTimePicker3
+            // txtDate
             // 
-            this.dateTimePicker3.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dateTimePicker3.Location = new System.Drawing.Point(514, 125);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(205, 20);
-            this.dateTimePicker3.TabIndex = 33;
+            this.txtDate.Location = new System.Drawing.Point(567, 80);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(176, 20);
+            this.txtDate.TabIndex = 36;
+            this.txtDate.Text = "06/05/2024";
+            this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTo
+            // 
+            this.txtTo.Location = new System.Drawing.Point(492, 124);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(176, 20);
+            this.txtTo.TabIndex = 37;
+            this.txtTo.Text = "06/05/2024";
+            this.txtTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtFrom
+            // 
+            this.txtFrom.Location = new System.Drawing.Point(136, 126);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(176, 20);
+            this.txtFrom.TabIndex = 38;
+            this.txtFrom.Text = "06/05/2024";
+            this.txtFrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormMessEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtFrom);
+            this.Controls.Add(this.txtTo);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel29);
             this.Controls.Add(this.txtEmployee_ID);
             this.Controls.Add(this.label5);
@@ -228,8 +253,10 @@
         private System.Windows.Forms.Panel panel29;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.TextBox txtFrom;
     }
 }

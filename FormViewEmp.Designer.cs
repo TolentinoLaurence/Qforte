@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViewEmp));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,9 +47,11 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblEmployeeID = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -156,7 +157,8 @@
             // btSearch
             // 
             this.btSearch.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSearch.ForeColor = System.Drawing.Color.White;
             this.btSearch.Location = new System.Drawing.Point(505, 107);
             this.btSearch.Name = "btSearch";
@@ -254,24 +256,39 @@
             this.lblEmployeeID.TabIndex = 32;
             this.lblEmployeeID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // panel29
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
+            this.panel29.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel29.Controls.Add(this.iconPictureBox1);
+            this.panel29.Controls.Add(this.label8);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(820, 55);
+            this.panel29.TabIndex = 40;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 49;
+            this.iconPictureBox1.Location = new System.Drawing.Point(26, 3);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(58, 49);
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(99, 28);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(90, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 22);
-            this.label8.TabIndex = 41;
+            this.label8.Size = new System.Drawing.Size(130, 20);
+            this.label8.TabIndex = 3;
             this.label8.Text = "View Employee";
             // 
             // FormViewEmp
@@ -280,8 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(820, 539);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel29);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblBirthday);
             this.Controls.Add(this.lblContact);
@@ -305,7 +321,9 @@
             this.Name = "FormViewEmp";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormViewEmp_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,7 +349,8 @@
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblEmployeeID;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel29;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label8;
     }
 }

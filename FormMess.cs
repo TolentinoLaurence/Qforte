@@ -32,10 +32,15 @@ namespace Qforte
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd1 = new SqlCommand("Delete * from MessageRequest where ID=@ID", conn);
-            cmd1.Parameters.AddWithValue("ID", dataGridView1.Rows);
+            SqlCommand cmd1 = new SqlCommand("Delete * from MessageRequest where Message@Message", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+            cmd1.Parameters.AddWithValue("Message", dataGridView1.Rows);
             conn.Open();
             cmd1.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt); 
+            dataGridView1.DataSource = dt;
             MessageBox.Show("Successfully Deleted");
             conn.Close();
         }

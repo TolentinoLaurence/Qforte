@@ -76,6 +76,7 @@ namespace Qforte
             cmd2.ExecuteNonQuery();
             conn.Close();
             bind_data();
+            MessageBox.Show("The Salary has been save.");
         }
 
         private void btClose_Click(object sender, EventArgs e)

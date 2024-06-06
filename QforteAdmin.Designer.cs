@@ -228,7 +228,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.Yellow;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QforteAdmin";
             this.Text = "QFORTE EMPLOYEE MANAGEMENT SYSTEM";
             this.menupanel.ResumeLayout(false);

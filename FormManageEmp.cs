@@ -25,7 +25,7 @@ namespace Qforte
         }
         private void bind_data()
         {
-            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Age As Age,Gender As Gender,Position As Position,Contact As Contact,Address As Address,BOD As BoD,Password As Password from Employee", conn);
+            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Age As Age,Gender As Gender,Position As Position,Contact As Contact,Address As Address,Birthday As Birthday,Password As Password from Employee", conn);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd1;
             DataTable dt = new DataTable();
@@ -37,7 +37,7 @@ namespace Qforte
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd2 = new SqlCommand("Insert into Employee(Id,Name,Age,Gender,Position,Contact,Address,BoD,Password)Values(@Id,@Name,@Age,@Gender,@Position,@Contact,@Address,@BoD,@Password)", conn);
+            SqlCommand cmd2 = new SqlCommand("Insert into Employee(Id,Name,Age,Gender,Position,Contact,Address,Birthday,Password)Values(@Id,@Name,@Age,@Gender,@Position,@Contact,@Address,@Birthday,@Password)", conn);
             cmd2.Parameters.AddWithValue("ID", txtemployee_ID.Text);
             cmd2.Parameters.AddWithValue("Name", txtemployee_name.Text);
             cmd2.Parameters.AddWithValue("Age", int.Parse(txtage.Text));
@@ -45,7 +45,7 @@ namespace Qforte
             cmd2.Parameters.AddWithValue("Position", cbPosition.Text);
             cmd2.Parameters.AddWithValue("Contact", float.Parse(txtcontact.Text));
             cmd2.Parameters.AddWithValue("Address", txtaddress.Text);
-            cmd2.Parameters.AddWithValue("BoD", txtbod.Text);
+            cmd2.Parameters.AddWithValue("Birthday", dateTimePicker1.Text);
             cmd2.Parameters.AddWithValue("Password", txtpassword.Text);
             conn.Open();
             cmd2.ExecuteNonQuery();
@@ -78,19 +78,19 @@ namespace Qforte
             cbPosition.Text = selectedrow.Cells[4].Value.ToString();
             txtcontact.Text = selectedrow.Cells[5].Value.ToString();
             txtaddress.Text = selectedrow.Cells[6].Value.ToString();
-            txtbod.Text = selectedrow.Cells[7].Value.ToString();
+            dateTimePicker1.Text = selectedrow.Cells[7].Value.ToString();
             txtpassword.Text = selectedrow.Cells[8].Value.ToString();
         }
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd3 = new SqlCommand("Update Employee Set Name=@Name,Age=@Age,Gender=@Gender,Position=@Position,Contact=@Contact,Address=@Address,BoD=@BoD,Password=@Password Where ID=@ID", conn);
+            SqlCommand cmd3 = new SqlCommand("Update Employee Set Name=@Name,Age=@Age,Gender=@Gender,Position=@Position,Contact=@Contact,Address=@Address,Birthday=@Birthday,Password=@Password Where ID=@ID", conn);
             cmd3.Parameters.AddWithValue("@Name", txtemployee_name.Text);
             cmd3.Parameters.AddWithValue("@Age", txtage.Text);
             cmd3.Parameters.AddWithValue("@Gender", cbGender.Text);
             cmd3.Parameters.AddWithValue("@Position", cbPosition.Text);
             cmd3.Parameters.AddWithValue("@Contact", float.Parse(txtcontact.Text));
             cmd3.Parameters.AddWithValue("@Address", txtaddress.Text);
-            cmd3.Parameters.AddWithValue("@BoD", dateTimePicker1.Text);
+            cmd3.Parameters.AddWithValue("@Birthday", dateTimePicker1.Text);
             cmd3.Parameters.AddWithValue("@Password", txtpassword.Text);
             cmd3.Parameters.AddWithValue("@ID", txtemployee_ID.Text);
             conn.Open();
@@ -102,13 +102,31 @@ namespace Qforte
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd4 = new SqlCommand("Delete from Employee where ID=@ID", conn);
+            SqlCommand cmd4 = new SqlCommand("Delete from Employee where ID=@ID,Name=@Name,Age=@Age,Gender=@Gender,Position=@Position,Contact=@Contact,Address=@Address,Birthday=@Birthday,Password=@Password", conn);
             cmd4.Parameters.AddWithValue("ID", txtemployee_ID.Text);
             conn.Open();
             cmd4.ExecuteNonQuery();
             MessageBox.Show("Successfully Deleted");
             conn.Close();
-            bind_data();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime birthDate = dateTimePicker1.Value;
+            int age = CalculateAge(birthDate);
+            txtage.Text = age.ToString();
+        }
+
+        private int CalculateAge(DateTime birthDate)
+        {
+            DateTime currentDate = DateTime.Now;
+            int age = currentDate.Year - birthDate.Year;
+            if (birthDate > currentDate.AddYears(-age))
+            {
+                age--;
+            }
+            return age;
+        }
+
     }
 }

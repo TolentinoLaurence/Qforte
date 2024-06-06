@@ -47,8 +47,9 @@ namespace Qforte
          
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Insert into MessageRequest(ID,From_Date,To_Date,Date,Message)Values(@ID,@From_Date,@To_Date,@Date,@Message)",conn);
+            SqlCommand cmd = new SqlCommand("Insert into MessageRequest(ID,Name,From_Date,To_Date,Date,Message)Values(@ID,@Name,@From_Date,@To_Date,@Date,@Message)",conn);
             cmd.Parameters.AddWithValue("ID", txtEmployee_ID.Text);
+            cmd.Parameters.AddWithValue("Name", txtName);
             cmd.Parameters.AddWithValue("From_Date", txtFrom.Text);
             cmd.Parameters.AddWithValue("To_Date", txtTo.Text);
             cmd.Parameters.AddWithValue("Date", txtDate.Text);
