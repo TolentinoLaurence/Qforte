@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QforteEmployee));
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.sidebartransmission1 = new System.Windows.Forms.Timer(this.components);
             this.menupanel1 = new System.Windows.Forms.Panel();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -40,7 +39,6 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.menupanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,14 +47,10 @@
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 502);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 548);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(944, 32);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1020, 32);
             this.flowLayoutPanel2.TabIndex = 5;
-            // 
-            // sidebartransmission1
-            // 
-            this.sidebartransmission1.Interval = 10;
             // 
             // menupanel1
             // 
@@ -73,8 +67,27 @@
             this.menupanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menupanel1.Location = new System.Drawing.Point(0, 0);
             this.menupanel1.Name = "menupanel1";
-            this.menupanel1.Size = new System.Drawing.Size(183, 502);
+            this.menupanel1.Size = new System.Drawing.Size(183, 548);
             this.menupanel1.TabIndex = 6;
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(64)))));
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton6.ForeColor = System.Drawing.Color.White;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.iconButton6.IconColor = System.Drawing.Color.White;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(4, 467);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(174, 59);
+            this.iconButton6.TabIndex = 6;
+            this.iconButton6.Text = "Log Out";
+            this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // pictureBox1
             // 
@@ -98,12 +111,13 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(4, 368);
+            this.iconButton5.Location = new System.Drawing.Point(4, 397);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(174, 59);
             this.iconButton5.TabIndex = 4;
             this.iconButton5.Text = "Calendar";
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // iconButton1
             // 
@@ -116,7 +130,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(4, 96);
+            this.iconButton1.Location = new System.Drawing.Point(3, 101);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(174, 59);
             this.iconButton1.TabIndex = 0;
@@ -135,7 +149,7 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(4, 299);
+            this.iconButton4.Location = new System.Drawing.Point(4, 322);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(174, 59);
             this.iconButton4.TabIndex = 3;
@@ -154,7 +168,7 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(4, 162);
+            this.iconButton2.Location = new System.Drawing.Point(4, 171);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(174, 59);
             this.iconButton2.TabIndex = 1;
@@ -173,7 +187,7 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(4, 231);
+            this.iconButton3.Location = new System.Drawing.Point(4, 247);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(174, 59);
             this.iconButton3.TabIndex = 2;
@@ -183,43 +197,25 @@
             // 
             // mainpanel
             // 
+            this.mainpanel.BackColor = System.Drawing.Color.White;
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(183, 0);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(761, 502);
+            this.mainpanel.Size = new System.Drawing.Size(837, 548);
             this.mainpanel.TabIndex = 7;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(64)))));
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(4, 438);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(174, 59);
-            this.iconButton6.TabIndex = 6;
-            this.iconButton6.Text = "Log Out";
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // QforteEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 534);
+            this.ClientSize = new System.Drawing.Size(1020, 580);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.menupanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QforteEmployee";
-            this.Text = "Form1";
+            this.Text = "QFORTE EMPLOYEE MANAGEMENT SYSTEM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menupanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -229,7 +225,6 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Timer sidebartransmission1;
         private System.Windows.Forms.Panel menupanel1;
         private System.Windows.Forms.Panel mainpanel;
         private FontAwesome.Sharp.IconButton iconButton1;

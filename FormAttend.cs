@@ -37,7 +37,7 @@ namespace Qforte
         private void btSearch_Click(object sender, EventArgs e)
         {
             SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Position As Position,Time_In As Time_In,Time_Out As Time_Out,Date As Date from Attendance where Date Like @Date+'%'", conn);
-            cmd1.Parameters.AddWithValue("Date", txtDate.Text);
+            cmd1.Parameters.AddWithValue("Date, ID", txtDate.Text);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd1;
             DataTable dt = new DataTable();

@@ -23,7 +23,7 @@ namespace Qforte
 
         private void bind_data()
         {
-            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Age As Age,Gender As Gender,Position As Position,Contact As Contact,Address As Address,BOD As BoD,Password As Password from Employee", conn);
+            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Age As Age,Gender As Gender,Position As Position,Contact As Contact,Address As Address,Birthday As Birthday,Password As Password from Employee", conn);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd1;
             DataTable dt = new DataTable();
@@ -40,32 +40,52 @@ namespace Qforte
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             ad.Fill(dt);
 
-                foreach (DataRow dr in dt.Rows)
-                {
-                    txtEmployee_ID.Text = dr["ID"].ToString();
-                    txtEmployee_name.Text = dr["Name"].ToString();
-                    txtAge.Text = dr["Age"].ToString();
-                    txtGender.Text = dr["Gender"].ToString();
-                    txtPosition.Text = dr["Position"].ToString();
-                    txtContact.Text = dr["Contact"].ToString();
-                    txtAddress.Text = dr["Address"].ToString();
-                    txtBod.Text = dr["BoD"].ToString();
-                    txtPassword.Text = dr["Password"].ToString();
-                    txtEmployee_ID.Visible = true;
-                    txtEmployee_name.Visible = true;
-                    txtAge.Visible = true;
-                    txtGender.Visible = true;
-                    txtPosition.Visible = true;
-                    txtContact.Visible = true;
-                    txtAddress.Visible = true;
-                    txtBod.Visible = true;
-                    txtPassword.Visible = true;
-                }           
+            foreach (DataRow dr in dt.Rows)
+            {
+                txtEmployee_ID.Text = dr["ID"].ToString();
+                txtEmployee_name.Text = dr["Name"].ToString();
+                txtAge.Text = dr["Age"].ToString();
+                txtGender.Text = dr["Gender"].ToString();
+                txtPosition.Text = dr["Position"].ToString();
+                txtContact.Text = dr["Contact"].ToString();
+                txtAddress.Text = dr["Address"].ToString();
+                dateTimePicker1.Text = dr["Birthday"].ToString();
+                txtPassword.Text = dr["Password"].ToString();
+                txtEmployee_ID.Visible = true;
+                txtEmployee_name.Visible = true;
+                txtAge.Visible = true;
+                txtGender.Visible = true;
+                txtPosition.Visible = true;
+                txtContact.Visible = true;
+                txtAddress.Visible = true;
+                dateTimePicker1.Visible = true;
+                txtPassword.Visible = true;
+                }
             conn.Close();
         }
         private void FormViewProf_Load(object sender, EventArgs e)
         {
             fetchdata();
+            bind_data();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtContact.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            txtPassword.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd3 = new SqlCommand("Update Employee Set Contact=@Contact,Address=@Address,Password=@Password", conn);
+            cmd3.Parameters.AddWithValue("@Contact", float.Parse(txtContact.Text));
+            cmd3.Parameters.AddWithValue("@Address", txtAddress.Text);
+            cmd3.Parameters.AddWithValue("@Password", txtPassword.Text);
+            conn.Open();
+            cmd3.ExecuteNonQuery();
+            MessageBox.Show("Successfully Updated");
+            conn.Close();
             bind_data();
         }
     }

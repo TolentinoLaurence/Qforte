@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 
 namespace Qforte
 {
@@ -29,6 +30,7 @@ namespace Qforte
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd1;
             DataTable dt = new DataTable();
+
             dt.Clear();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -37,33 +39,54 @@ namespace Qforte
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd2 = new SqlCommand("Insert into Employee(Id,Name,Age,Gender,Position,Contact,Address,Birthday,Password)Values(@Id,@Name,@Age,@Gender,@Position,@Contact,@Address,@Birthday,@Password)", conn);
-            cmd2.Parameters.AddWithValue("ID", txtemployee_ID.Text);
-            cmd2.Parameters.AddWithValue("Name", txtemployee_name.Text);
-            cmd2.Parameters.AddWithValue("Age", int.Parse(txtage.Text));
-            cmd2.Parameters.AddWithValue("Gender", cbGender.Text);
-            cmd2.Parameters.AddWithValue("Position", cbPosition.Text);
-            cmd2.Parameters.AddWithValue("Contact", float.Parse(txtcontact.Text));
-            cmd2.Parameters.AddWithValue("Address", txtaddress.Text);
-            cmd2.Parameters.AddWithValue("Birthday", dateTimePicker1.Text);
-            cmd2.Parameters.AddWithValue("Password", txtpassword.Text);
             conn.Open();
+
+            string maxIdQuery = "SELECT MAX(Id) FROM Employee";
+            SqlCommand getMaxIdCmd = new SqlCommand(maxIdQuery, conn);
+            string maxId = getMaxIdCmd.ExecuteScalar() as string;
+            int nextNumericPart = 1;
+
+            if (!string.IsNullOrEmpty(maxId))
+            {
+                int numericPart;
+                if (int.TryParse(maxId.Substring(3), out numericPart))
+                {
+                    nextNumericPart = numericPart + 1;
+                }
+            }
+
+            string nextId = $"LPI{nextNumericPart:D3}";
+            string query = "INSERT INTO Employee(ID, Name, Age, Gender, Position, Contact, Address, Birthday, Password) VALUES(@ID, @Name, @Age, @Gender, @Position, @Contact, @Address, @Birthday, @Password)";
+            SqlCommand cmd2 = new SqlCommand(query, conn);
+            cmd2.Parameters.AddWithValue("@ID", nextId);
+            cmd2.Parameters.AddWithValue("@Name", txtemployee_name.Text);
+            cmd2.Parameters.AddWithValue("@Age", int.Parse(txtage.Text));
+            cmd2.Parameters.AddWithValue("@Gender", cbGender.Text);
+            cmd2.Parameters.AddWithValue("@Position", cbPosition.Text);
+            cmd2.Parameters.AddWithValue("@Contact", float.Parse(txtcontact.Text));
+            cmd2.Parameters.AddWithValue("@Address", txtaddress.Text);
+            cmd2.Parameters.AddWithValue("@Birthday", dateTimePicker1.Text);
+            cmd2.Parameters.AddWithValue("@Password", txtpassword.Text);
             cmd2.ExecuteNonQuery();
             MessageBox.Show("Successfully Registered");
-            conn.Close();
-            bind_data();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            txtemployee_ID.Text = "";
             txtemployee_name.Text = "";
             txtage.Text = "";
             txtcontact.Text = "";
             txtaddress.Text = "";
+            dateTimePicker1.Value = DateTime.Now;
             txtpassword.Text = "";
+            conn.Close();
+            bind_data();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtemployee_name.Text = "";
+            txtage.Text = "";
+            txtcontact.Text = "";
+            txtaddress.Text = "";
+            dateTimePicker1.Value = DateTime.Now;
+            txtpassword.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -71,7 +94,6 @@ namespace Qforte
             int index;
             index = e.RowIndex;
             DataGridViewRow selectedrow = dataGridView1.Rows[index];
-            txtemployee_ID.Text = selectedrow.Cells[0].Value.ToString();
             txtemployee_name.Text = selectedrow.Cells[1].Value.ToString();
             txtage.Text = selectedrow.Cells[2].Value.ToString();
             cbGender.Text = selectedrow.Cells[3].Value.ToString();
@@ -84,6 +106,8 @@ namespace Qforte
         private void btUpdate_Click(object sender, EventArgs e)
         {
             SqlCommand cmd3 = new SqlCommand("Update Employee Set Name=@Name,Age=@Age,Gender=@Gender,Position=@Position,Contact=@Contact,Address=@Address,Birthday=@Birthday,Password=@Password Where ID=@ID", conn);
+            string ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            cmd3.Parameters.AddWithValue("ID", ID);
             cmd3.Parameters.AddWithValue("@Name", txtemployee_name.Text);
             cmd3.Parameters.AddWithValue("@Age", txtage.Text);
             cmd3.Parameters.AddWithValue("@Gender", cbGender.Text);
@@ -92,7 +116,6 @@ namespace Qforte
             cmd3.Parameters.AddWithValue("@Address", txtaddress.Text);
             cmd3.Parameters.AddWithValue("@Birthday", dateTimePicker1.Text);
             cmd3.Parameters.AddWithValue("@Password", txtpassword.Text);
-            cmd3.Parameters.AddWithValue("@ID", txtemployee_ID.Text);
             conn.Open();
             cmd3.ExecuteNonQuery();
             MessageBox.Show("Successfully Updated");
@@ -102,8 +125,9 @@ namespace Qforte
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd4 = new SqlCommand("Delete from Employee where ID=@ID,Name=@Name,Age=@Age,Gender=@Gender,Position=@Position,Contact=@Contact,Address=@Address,Birthday=@Birthday,Password=@Password", conn);
-            cmd4.Parameters.AddWithValue("ID", txtemployee_ID.Text);
+            string ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            SqlCommand cmd4 = new SqlCommand("Delete from Employee where ID=@ID", conn);
+            cmd4.Parameters.AddWithValue("ID", ID);
             conn.Open();
             cmd4.ExecuteNonQuery();
             MessageBox.Show("Successfully Deleted");
@@ -128,5 +152,30 @@ namespace Qforte
             return age;
         }
 
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Age As Age,Gender As Gender,Position As Position,Contact As Contact,Address As Address,Birthday As Birthday,Password As Password from Employee where Name like @Name+'%'", conn);
+            cmd1.Parameters.AddWithValue("Name", txtSearch.Text);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd1;
+            DataTable dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void btPrint_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
+            dataGridView1.DrawToBitmap(imagebmp, new Rectangle(0,0, dataGridView1.Width, dataGridView1.Height));
+            e.Graphics.DrawImage(imagebmp, 10, 20);
+        }
     }
 }

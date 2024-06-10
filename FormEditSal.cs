@@ -65,13 +65,13 @@ namespace Qforte
         private void btUpdate_Click(object sender, EventArgs e)
         {
             SqlCommand cmd2 = new SqlCommand("UPDATE Salary SET Crew=@Crew, Delivery_Driver=@Delivery_Driver, Delivery_Helper=@Delivery_Helper, Product_Checker=@Product_Checker, SSS=@SSS, PHILHEALTH=@PHILHEALTH, HDMF=@HDMF", conn);
-            cmd2.Parameters.AddWithValue("@Crew", float.Parse(txtCrew.Text));
-            cmd2.Parameters.AddWithValue("@Delivery_Driver", float.Parse(txtDeliveryDriver.Text));
-            cmd2.Parameters.AddWithValue("@Delivery_Helper", float.Parse(txtDeliveryHelper.Text));
-            cmd2.Parameters.AddWithValue("@Product_Checker", float.Parse(txtProductChecker.Text));
-            cmd2.Parameters.AddWithValue("@SSS", float.Parse(txtSSS.Text));
-            cmd2.Parameters.AddWithValue("@PHILHEALTH", float.Parse(txtPhilhealth.Text));
-            cmd2.Parameters.AddWithValue("@HDMF", float.Parse(txtHDMF.Text));
+            cmd2.Parameters.AddWithValue("@Crew", decimal.Parse(txtCrew.Text));
+            cmd2.Parameters.AddWithValue("@Delivery_Driver", decimal.Parse(txtDeliveryDriver.Text));
+            cmd2.Parameters.AddWithValue("@Delivery_Helper", decimal.Parse(txtDeliveryHelper.Text));
+            cmd2.Parameters.AddWithValue("@Product_Checker", decimal.Parse(txtProductChecker.Text));
+            cmd2.Parameters.AddWithValue("@SSS", decimal.Parse(txtSSS.Text));
+            cmd2.Parameters.AddWithValue("@PHILHEALTH", decimal.Parse(txtPhilhealth.Text));
+            cmd2.Parameters.AddWithValue("@HDMF", decimal.Parse(txtHDMF.Text));
             conn.Open();
             cmd2.ExecuteNonQuery();
             conn.Close();

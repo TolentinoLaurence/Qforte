@@ -33,9 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btDelete = new FontAwesome.Sharp.IconButton();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btAccept = new FontAwesome.Sharp.IconButton();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -48,25 +51,45 @@
             this.btDelete.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btDelete.IconColor = System.Drawing.Color.Black;
             this.btDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btDelete.Location = new System.Drawing.Point(671, 455);
+            this.btDelete.Location = new System.Drawing.Point(673, 443);
             this.btDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(114, 41);
             this.btDelete.TabIndex = 2;
-            this.btDelete.Text = "DELETE";
+            this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // panel29
             // 
             this.panel29.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel29.Controls.Add(this.iconButton2);
             this.panel29.Controls.Add(this.iconPictureBox1);
             this.panel29.Controls.Add(this.label10);
             this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel29.Location = new System.Drawing.Point(0, 0);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(820, 55);
+            this.panel29.Size = new System.Drawing.Size(836, 55);
             this.panel29.TabIndex = 29;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton2.IconSize = 25;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(702, 15);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(96, 33);
+            this.iconButton2.TabIndex = 5;
+            this.iconButton2.Text = "Records";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconPictureBox1
             // 
@@ -120,7 +143,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -133,14 +156,48 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 324);
+            this.dataGridView1.Size = new System.Drawing.Size(812, 333);
             this.dataGridView1.TabIndex = 30;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.Red;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(541, 443);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(114, 41);
+            this.iconButton1.TabIndex = 31;
+            this.iconButton1.Text = "Decline";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btAccept
+            // 
+            this.btAccept.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btAccept.ForeColor = System.Drawing.Color.White;
+            this.btAccept.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btAccept.IconColor = System.Drawing.Color.Black;
+            this.btAccept.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btAccept.Location = new System.Drawing.Point(408, 443);
+            this.btAccept.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btAccept.Name = "btAccept";
+            this.btAccept.Size = new System.Drawing.Size(114, 41);
+            this.btAccept.TabIndex = 32;
+            this.btAccept.Text = "Accept";
+            this.btAccept.UseVisualStyleBackColor = false;
+            this.btAccept.Click += new System.EventHandler(this.btAccept_Click);
             // 
             // FormMess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 539);
+            this.ClientSize = new System.Drawing.Size(836, 548);
+            this.Controls.Add(this.btAccept);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel29);
             this.Controls.Add(this.btDelete);
@@ -164,5 +221,8 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btAccept;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

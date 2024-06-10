@@ -83,11 +83,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalendar.Designer.cs">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageRecords.Designer.cs">
+      <DependentUpon>FormMessageRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMessEmp.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,11 @@
     <Compile Include="FormEditSal.Designer.cs">
       <DependentUpon>FormEditSal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QforteEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +153,6 @@
     </Compile>
     <Compile Include="FormSal.Designer.cs">
       <DependentUpon>FormSal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormViewEmp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormViewEmp.Designer.cs">
-      <DependentUpon>FormViewEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="FormManageEmp.cs">
       <SubType>Form</SubType>
@@ -169,8 +180,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDays.Designer.cs">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormCalendar.resx">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageRecords.resx">
+      <DependentUpon>FormMessageRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessEmp.resx">
       <DependentUpon>FormMessEmp.cs</DependentUpon>
@@ -196,9 +225,6 @@
     <EmbeddedResource Include="FormSal.resx">
       <DependentUpon>FormSal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormViewEmp.resx">
-      <DependentUpon>FormViewEmp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormManageEmp.resx">
       <DependentUpon>FormManageEmp.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +240,13 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -21,34 +21,11 @@ namespace Qforte
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void menu_Click(object sender, EventArgs e)
-        {
-            sidebartransmission1.Start();
-        }
-
-        private void sidebartransmission1_Tick(object sender, EventArgs e)
-        {
-            if (menupanel1Expand)
-            {
-                menupanel1.Width -= 10;
-                if (menupanel1.Width <= 66)
-                {
-                    menupanel1Expand = false;
-                    sidebartransmission1.Stop();
-                }
-                else
-                {
-                    menupanel1.Width += 10;
-                    if (menupanel1.Width >= 183)
-                    {
-                        menupanel1Expand = false;
-                        sidebartransmission1.Stop();
-                    }
-                }
-            }
+            FormHome formHome = new FormHome();
+            formHome.TopLevel = false;
+            mainpanel.Controls.Add(formHome);
+            formHome.BringToFront();
+            formHome.Show();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -96,6 +73,15 @@ namespace Qforte
                 formLog.Show();
                 this.Hide();
             }
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            FormCalendar cal = new FormCalendar();
+            cal.TopLevel = false;
+            mainpanel.Controls.Add(cal);
+            cal.BringToFront();
+            cal.Show();
         }
     }
 }
