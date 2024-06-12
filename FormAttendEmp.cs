@@ -50,7 +50,7 @@ namespace Qforte
                 {
                     string maxId = (string)result;
                     int numericPart;
-                    if (int.TryParse(maxId.Substring(1000000), out numericPart))
+                    if (int.TryParse(maxId.Substring(100), out numericPart))
                     {
                         nextNumericPart = numericPart + 1;
                     }

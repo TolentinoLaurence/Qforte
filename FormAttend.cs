@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace Qforte
@@ -36,13 +37,19 @@ namespace Qforte
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Position As Position,Time_In As Time_In,Time_Out As Time_Out,Date As Date from Attendance where Date Like @Date+'%'", conn);
-            cmd1.Parameters.AddWithValue("Date, ID", txtDate.Text);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd1;
+            string searchText = txtSearch.Text.Trim();
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter a search query.");
+                return;
+            }
+
+            SqlCommand cmd = new SqlCommand("SELECT ID, Name, Position, Time_In, Time_Out, Date FROM Attendance WHERE Date LIKE @SearchText OR Name LIKE @SearchText OR ID LIKE @SearchText", conn);
+            cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt); 
+            da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
     }

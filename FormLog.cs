@@ -54,8 +54,8 @@ namespace Qforte
 
             try
             {
-                string querry = "Select * from Employee where ID = '" + txtUser_ID.Text + "' and Password = '" + txtpassword.Text + "'";
-                SqlDataAdapter da = new SqlDataAdapter(querry, conn);
+                string query = "Select * from Employee where ID = '" + txtUser_ID.Text + "' and Password = '" + txtpassword.Text + "'";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
 
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -80,13 +80,12 @@ namespace Qforte
                     MessageBox.Show("Invalid Details");
                     txtUser_ID.Clear();
                     txtpassword.Clear();
-
                     txtUser_ID.Focus();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {

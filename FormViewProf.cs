@@ -19,6 +19,7 @@ namespace Qforte
         {
             InitializeComponent();
         }
+
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-BOTTGEF\\SQLEXPRESS;Initial Catalog=database;Integrated Security=True;");
 
         private void bind_data()
@@ -31,13 +32,19 @@ namespace Qforte
             da.Fill(dt);
         }
 
-        private void fetchdata()
+        private void FormViewProf_Load(object sender, EventArgs e)
+        {
+            fetchData();
+            bind_data();
+        }
+
+        private void fetchData()
         {
             conn.Open();
-            string querry = "select * from Employee";
-            SqlCommand cmd = new SqlCommand(querry, conn);
-            DataTable dt = new DataTable();
+            string query = "SELECT * FROM Employee";
+            SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
             ad.Fill(dt);
 
             foreach (DataRow dr in dt.Rows)
@@ -49,8 +56,9 @@ namespace Qforte
                 txtPosition.Text = dr["Position"].ToString();
                 txtContact.Text = dr["Contact"].ToString();
                 txtAddress.Text = dr["Address"].ToString();
-                dateTimePicker1.Text = dr["Birthday"].ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(dr["Birthday"]);
                 txtPassword.Text = dr["Password"].ToString();
+
                 txtEmployee_ID.Visible = true;
                 txtEmployee_name.Visible = true;
                 txtAge.Visible = true;
@@ -60,13 +68,40 @@ namespace Qforte
                 txtAddress.Visible = true;
                 dateTimePicker1.Visible = true;
                 txtPassword.Visible = true;
-                }
+            }
             conn.Close();
-        }
-        private void FormViewProf_Load(object sender, EventArgs e)
-        {
-            fetchdata();
             bind_data();
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd3 = new SqlCommand("Update Employee Set Contact=@Contact, Address=@Address, Password=@Password", conn);
+                cmd3.Parameters.AddWithValue("@Contact", float.Parse(txtContact.Text));
+                cmd3.Parameters.AddWithValue("@Address", txtAddress.Text);
+                cmd3.Parameters.AddWithValue("@Password", txtPassword.Text);
+                int rowsAffected = cmd3.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Successfully Updated");
+                    bind_data();
+                }
+                else
+                {
+                    MessageBox.Show("Update failed");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,19 +109,6 @@ namespace Qforte
             txtContact.Enabled = true;
             dateTimePicker1.Enabled = true;
             txtPassword.Enabled = true;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SqlCommand cmd3 = new SqlCommand("Update Employee Set Contact=@Contact,Address=@Address,Password=@Password", conn);
-            cmd3.Parameters.AddWithValue("@Contact", float.Parse(txtContact.Text));
-            cmd3.Parameters.AddWithValue("@Address", txtAddress.Text);
-            cmd3.Parameters.AddWithValue("@Password", txtPassword.Text);
-            conn.Open();
-            cmd3.ExecuteNonQuery();
-            MessageBox.Show("Successfully Updated");
-            conn.Close();
-            bind_data();
         }
     }
 }

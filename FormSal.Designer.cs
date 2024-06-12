@@ -57,7 +57,7 @@
             this.btFetchData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btFetchData.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFetchData.ForeColor = System.Drawing.Color.White;
-            this.btFetchData.Location = new System.Drawing.Point(286, 75);
+            this.btFetchData.Location = new System.Drawing.Point(286, 73);
             this.btFetchData.Name = "btFetchData";
             this.btFetchData.Size = new System.Drawing.Size(82, 30);
             this.btFetchData.TabIndex = 34;
@@ -77,19 +77,19 @@
             // 
             // txtEmployee_ID
             // 
-            this.txtEmployee_ID.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtEmployee_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmployee_ID.BackColor = System.Drawing.Color.White;
+            this.txtEmployee_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmployee_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployee_ID.Location = new System.Drawing.Point(88, 79);
+            this.txtEmployee_ID.Location = new System.Drawing.Point(88, 75);
             this.txtEmployee_ID.Name = "txtEmployee_ID";
-            this.txtEmployee_ID.Size = new System.Drawing.Size(192, 20);
+            this.txtEmployee_ID.Size = new System.Drawing.Size(192, 27);
             this.txtEmployee_ID.TabIndex = 32;
             // 
             // txtname
             // 
             this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtname.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(57, 145);
+            this.txtname.Location = new System.Drawing.Point(59, 145);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(185, 20);
             this.txtname.TabIndex = 36;
@@ -108,7 +108,7 @@
             // 
             this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPosition.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(58, 214);
+            this.txtPosition.Location = new System.Drawing.Point(59, 208);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(184, 20);
             this.txtPosition.TabIndex = 38;
@@ -127,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 254);
+            this.label1.Location = new System.Drawing.Point(54, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 19);
             this.label1.TabIndex = 39;
@@ -137,7 +137,7 @@
             // 
             this.txtWork_day.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtWork_day.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWork_day.Location = new System.Drawing.Point(57, 281);
+            this.txtWork_day.Location = new System.Drawing.Point(57, 273);
             this.txtWork_day.Name = "txtWork_day";
             this.txtWork_day.Size = new System.Drawing.Size(130, 27);
             this.txtWork_day.TabIndex = 40;
@@ -149,7 +149,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(88, 417);
+            this.button1.Location = new System.Drawing.Point(88, 402);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 36);
             this.button1.TabIndex = 41;
@@ -163,7 +163,7 @@
             this.btEditSal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEditSal.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditSal.ForeColor = System.Drawing.Color.White;
-            this.btEditSal.Location = new System.Drawing.Point(699, 12);
+            this.btEditSal.Location = new System.Drawing.Point(712, 12);
             this.btEditSal.Name = "btEditSal";
             this.btEditSal.Size = new System.Drawing.Size(92, 36);
             this.btEditSal.TabIndex = 43;
@@ -189,7 +189,7 @@
             // 
             this.cbhSSS.AutoSize = true;
             this.cbhSSS.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbhSSS.Location = new System.Drawing.Point(57, 342);
+            this.cbhSSS.Location = new System.Drawing.Point(57, 334);
             this.cbhSSS.Name = "cbhSSS";
             this.cbhSSS.Size = new System.Drawing.Size(47, 20);
             this.cbhSSS.TabIndex = 45;
@@ -200,7 +200,7 @@
             // 
             this.chbPHILHEALTH.AutoSize = true;
             this.chbPHILHEALTH.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbPHILHEALTH.Location = new System.Drawing.Point(142, 342);
+            this.chbPHILHEALTH.Location = new System.Drawing.Point(142, 334);
             this.chbPHILHEALTH.Name = "chbPHILHEALTH";
             this.chbPHILHEALTH.Size = new System.Drawing.Size(97, 20);
             this.chbPHILHEALTH.TabIndex = 46;
@@ -211,7 +211,7 @@
             // 
             this.chbHDMF.AutoSize = true;
             this.chbHDMF.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbHDMF.Location = new System.Drawing.Point(271, 342);
+            this.chbHDMF.Location = new System.Drawing.Point(271, 334);
             this.chbHDMF.Name = "chbHDMF";
             this.chbHDMF.Size = new System.Drawing.Size(61, 20);
             this.chbHDMF.TabIndex = 47;

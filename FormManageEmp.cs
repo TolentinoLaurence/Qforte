@@ -154,12 +154,18 @@ namespace Qforte
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd1 = new SqlCommand("Select ID As ID,Name As Name,Age As Age,Gender As Gender,Position As Position,Contact As Contact,Address As Address,Birthday As Birthday,Password As Password from Employee where Name like @Name+'%'", conn);
-            cmd1.Parameters.AddWithValue("Name", txtSearch.Text);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd1;
+            string searchText = txtSearch.Text.Trim();
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter a search query.");
+                return;
+            }
+
+            SqlCommand cmd = new SqlCommand("SELECT ID, Name, Position, Time_In, Time_Out, Date FROM Attendance WHERE Date LIKE @SearchText OR Name LIKE @SearchText OR ID LIKE @SearchText", conn);
+            cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
-            dt.Clear();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }

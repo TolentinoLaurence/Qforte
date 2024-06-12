@@ -14,6 +14,8 @@ namespace Qforte
     public partial class FormCalendar : Form
     {
         int month, year;
+
+        public static int static_month, static_year;
         public FormCalendar()
         {
             InitializeComponent();
@@ -32,6 +34,9 @@ namespace Qforte
 
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
+
+            static_month = month;
+            static_year = year;
 
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
@@ -65,6 +70,9 @@ namespace Qforte
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " +  year;
 
+            static_month = month;
+            static_year = year;
+
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
@@ -90,6 +98,9 @@ namespace Qforte
             month++;
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
+
+            static_month = month;
+            static_year = year;
 
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
